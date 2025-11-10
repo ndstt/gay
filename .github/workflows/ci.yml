@@ -25,18 +25,11 @@ jobs:
 
       - name: Run gitleaks
         uses: gitleaks/gitleaks-action@v2
-        with:
-          args: >
-            detect
-            --source .
-            --redact
-            --report-format sarif
-            --report-path gitleaks.sarif
 
       - name: Upload SARIF to code scanning
         uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: gitleaks.sarif
+          sarif_file: results.sarif
 
   build:
     name: Build & Push to GHCR
