@@ -76,4 +76,4 @@ jobs:
         provenance: false
 
     - name: Show image ref
-      run: echo "Pushed: ${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.value }}"
+      run: echo "Pushed ${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.value }}"
