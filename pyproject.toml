@@ -3,8 +3,17 @@ name = "gay"
 version = "0.1.0"
 description = ""
 requires-python = ">=3.10"
+
 dependencies = [
-    
+    "confluent-kafka>=2.6.0",
+  "requests>=2.32",
+  "sseclient-py>=1.8",
+  "orjson>=3.10",
+  "tenacity>=9.0",
+  "python-dotenv>=1.0",
+  "pydantic>=2.9",
+  "loguru>=0.7"
 ]
+
 [tool.poetry]
 package-mode = false
